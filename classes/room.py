@@ -5,10 +5,8 @@ class Room:
         self.songs = songs
         self.space = space
 
-    # def add_song_to_room(self, room, song):
-    #     for room in self.room_number:
-    #         if self.room_number == room:
-    #             self.room.songs.append(song)
+    def add_song_to_room(self, rooms, song):    
+        self.songs.append(song)
 
 
     def number_of_songs_in_room(self, room):

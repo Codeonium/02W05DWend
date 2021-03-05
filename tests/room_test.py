@@ -17,9 +17,10 @@ class TestRoom(unittest.TestCase):
         self.waiting_room = Room("Elevate your scamp", 7, "Best of Elevator Music",200 )
         self.new_song = Song("Take On Me", "80's", 1.50, 244)
     
-    # def test_add_song_to_room(self):
-    #     self.room1add_song_to_room(self.room1, self.new_song)
-    #     self.assertEqual(1, self.room1.number_of_songs_in_room(self.room1))
+    def test_add_song_to_room(self):
+        self.room1.add_song_to_room(self.room1, self.new_song)
+        self.assertEqual(1, self.room1.number_of_songs_in_room(self.room1))
+        self.assertEqual(0, self.room3.number_of_songs_in_room(self.room3))
 
     def test_get_number_of_songs_in_room(self):
         self.assertEqual(0, self.room2.number_of_songs_in_room(self.room2))
