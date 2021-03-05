@@ -8,6 +8,12 @@ class TestGuest(unittest.TestCase):
         self.dior = Guest("Dior", 200) # the self is a sugar for Guest
         self.frodo = Guest("Frodo", 10)
 
+    def test_guest_has_name(self):
+        self.assertEqual("Dior", self.dior.name)
+
+    def test_guest_has_money(self):
+        self.assertEqual(200, self.dior.money)
+
     def test_guest_can_pay(self):
         self.dior.pay_entry_fee(20)
         self.assertEqual(180, self.dior.money)
@@ -17,3 +23,5 @@ class TestGuest(unittest.TestCase):
         dior_loaded = self.dior.pay_to_leave(20)
         self.assertEqual("Better start washing Mics", frodo_poor)
         self.assertEqual(("Best Mic night in ages", 180), (dior_loaded, self.dior.money))
+    
+    

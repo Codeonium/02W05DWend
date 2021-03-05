@@ -13,3 +13,4 @@ class Guest:
             self.money -= fee
             return f"Best Mic night in ages"
 
+    
