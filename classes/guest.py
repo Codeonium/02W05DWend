@@ -5,4 +5,11 @@ class Guest:
 
     def pay_entry_fee(self, fee):
         self.money -= fee
-        
+    
+    def pay_to_leave(self, fee):
+        if self.money < fee:
+            return f"Better start washing Mics"
+        else:
+            self.money -= fee
+            return f"Best Mic night in ages"
+

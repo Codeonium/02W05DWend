@@ -23,16 +23,16 @@ Your program should be test driven and should be able to:
 - Add anything extra you think would be good to have at a karaoke venue!
 
 
-### Getting Started
+<!-- ### Getting Started
 
 1. Create a new directory for your homework called codeclan_caraoke
 2. Create a .gitignore file in this directory and paste the following into it:
 
 ```
 __pycache__
-```
+``` -->
 
-3. Create a file called ``` run_tests.py ``` and paste the following code into it:
+<!-- 3. Create a file called ``` run_tests.py ``` and paste the following code into it:
 
 ```python
 import unittest
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
 ```bash 
 python3 run_tests.py
-```
+``` -->
 
 
 ### PDA Reminder:
