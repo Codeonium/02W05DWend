@@ -18,3 +18,5 @@ class TestSong(unittest.TestCase):
         
         def test_has_time_in_seconds(self):
             self.assertEqual(244, self.take_on_me.duration)
+
+# No more changes here to be made
