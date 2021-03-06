@@ -27,7 +27,16 @@ class TestRoom(unittest.TestCase):
         self.room1.add_guest_to_room(self.room1, self.bert)
         self.assertEqual(2, self.room1.number_of_guests_in_room(self.room1))
 
+    def test_reduce_space_from_room(self):
+        pass
+
+    def test_increase_space_in_room(self):
+        pass
+    
     def test_profit_from_room(self):
+        pass
+    
+    def test_total_profit(self):
         pass
     
     def test_room_limit(self):
