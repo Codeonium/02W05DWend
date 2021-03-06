@@ -8,15 +8,27 @@ from classes.song import Song
 class TestRoom(unittest.TestCase):
     
     def setUp(self):
-        self.room1 = Room("80's", 1, [],25 )
-        self.room2 = Room("90's", 2, [],20 )
-        self.room3 = Room("00's", 3, [],10 )
-        self.room4 = Room("70's", 4, [],15 )
-        self.room5 = Room("60's", 5, [],5 )
-        self.room6 = Room("Music from before time was invented", 6, [],50 )
-        self.waiting_room = Room("Elevate your scamp", 7, "Best of Elevator Music",200 )
+        self.room1 = Room("80's", 1, [], [],25 )
+        self.room2 = Room("90's", 2, [], [],20 )
+        self.room3 = Room("00's", 3, [], [],10 )
+        self.room4 = Room("70's", 4, [], [],15 )
+        self.room5 = Room("60's", 5, [], [],5 )
+        self.room6 = Room("Music from before time was invented", 6, [], [],50 )
+        self.waiting_room = Room("Elevate your scamp", 7, "Best of Elevator Music", [],200 )
         self.new_song = Song("Take On Me", "80's", 1.50, 244)
-    
+        self.new_song1 = Song("Bohemia Rapsody", "80's", 2.00, 354)
+        self.bert = Guest ("Bert", 200, "Bohemia Rapsody" )
+        self.tom = Guest ("Tom", 100, "Bohemia Rapsody")
+        self.william = Guest ("William", 50, "Bohemia Rapsody")
+
+
+    def test_add_guest_to_room(self):
+        self.room1.add_guest_to_room(self.room1, self.tom)
+        self.assertEqual(1, self.room1.guests_in_room(self.room1))
+
+    def test_guests_in_room(self):
+        self.assertEqual(0, self.room1.guests_in_room(self.room1))
+
     def test_add_song_to_room(self):
         self.room1.add_song_to_room(self.room1, self.new_song)
         self.assertEqual(1, self.room1.number_of_songs_in_room(self.room1))
