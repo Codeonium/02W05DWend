@@ -8,12 +8,19 @@ class Guest:
     def pay_entry_fee(self, fee):
         self.money -= fee
     
-    def pick_a_music(self, music):
+    def cheer_to_music(self, music):
+        #if fav_song == music:
+        #return f"You know this music? this is {fav_song}, Woop, Woop"
         pass
 
-    def pick_a_room(self, room):
+    def pick_room_by_music(self, music):
         pass
 
+    def pick_a_room_by_decade(self, room):
+        pass
+    
+    def buy_a_drink(self, room ,drink):
+        pass
     def pay_to_leave(self, fee):
         if self.money < fee:
             return f"Better start washing Mics"
