@@ -22,3 +22,8 @@ class Room:
 
     def number_of_songs_in_room(self, room):
         return len(self.songs)
+    
+    def reduce_space_from_room(self, room):
+        self.space -= self.number_of_guests_in_room(room)
+        return self.space
+        

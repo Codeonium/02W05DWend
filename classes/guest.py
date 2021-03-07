@@ -21,6 +21,7 @@ class Guest:
     
     def buy_a_drink(self, room ,drink):
         pass
+    
     def pay_to_leave(self, fee):
         if self.money < fee:
             return f"Better start washing Mics"
